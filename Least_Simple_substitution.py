@@ -77,6 +77,9 @@ print(letterCount)
 for i, j in count_Freq.items():
     per_oo[i] = (j / letterCount) * 100
 
-print(per_oo)
+print(sorted(per_oo.items(),reverse=True, key=lambda kv:
+(kv[1], kv[0])))
 
+# sorted(per_oo.items(), key=lambda kv:
+#                  (kv[1], kv[0]))
 # deciding rules
