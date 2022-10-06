@@ -1,6 +1,8 @@
 count_Freq = {}
 
 P_Text = input("give me the Plant text Please")
+P_Text=P_Text.upper()
+P_Text.strip()
 # P_Text = "abcdefghijklmnopqrstuvwxyz"
 
 letterFrequency = {'E': 12.0,
@@ -30,7 +32,7 @@ letterFrequency = {'E': 12.0,
                    'J': 0.10,
                    'Z': 0.07}
 #  finding freqancy
-
+print(P_Text)
 for i in P_Text:
     if i in count_Freq:
         count_Freq[i] += 1
@@ -43,6 +45,7 @@ print(count_Freq)
 # percentage
 per_oo = {}
 ss = sorted(list(count_Freq))
+ss=set(ss)
 # print(ss)
 for i, j in count_Freq.items():
     per_oo[i] = (j / len(ss)) * 100
