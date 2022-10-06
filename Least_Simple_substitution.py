@@ -1,9 +1,31 @@
 count_Freq = {}
 
+
+# Python3 code to remove whitespace
+def remove(string):
+    return string.replace(" ", "")
+
+
+# Driver Program
+
+# input the string
+
+
 P_Text = input("give me the Plant text Please")
 P_Text=P_Text.upper()
 P_Text.strip()
+P_Text=remove(P_Text)
+
+P_Text = ''.join([i for i in P_Text if  i.isalpha()])
 # P_Text = "abcdefghijklmnopqrstuvwxyz"
+
+# contents = []
+# while True:
+#     try:
+#         line = input()
+#     except EOFError:
+#         break
+#     contents.append(line)
 
 letterFrequency = {'E': 12.0,
                    'T': 9.10,
@@ -47,8 +69,13 @@ per_oo = {}
 ss = sorted(list(count_Freq))
 ss=set(ss)
 # print(ss)
+letterCount=0
+for k, m in count_Freq.items() :
+    letterCount +=m
+print(letterCount)
+
 for i, j in count_Freq.items():
-    per_oo[i] = (j / len(ss)) * 100
+    per_oo[i] = (j / letterCount) * 100
 
 print(per_oo)
 
