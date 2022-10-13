@@ -89,6 +89,11 @@ def main():
                 break
         print(arr)
 
+    # for i in range(arr):
+    #     for j in range(arr[0]):
+    #         print(arr[i][j])
+
+
 
 if __name__ == '__main__':
     main()
