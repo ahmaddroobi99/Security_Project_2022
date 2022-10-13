@@ -17,8 +17,10 @@ def main():
         dir_down = None
         row, col = 0, 0
         for i in range(len(text)):
-            if row == 0: dir_down = True
-            if row == rows - 1: dir_down = False
+            if row == 0:
+                dir_down = True
+            if row == rows - 1:
+                dir_down = False
 
             arr[row][col] = '*'
             col += 1
