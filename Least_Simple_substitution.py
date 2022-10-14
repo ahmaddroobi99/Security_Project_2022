@@ -99,8 +99,43 @@ LSS = {'a': 'J', 'b': 'I', 'c': 'C', 'd': 'A', 'e': 'X', 'f': 'S', 'g': 'E',
 # sorted(per_oo.items(), key=lambda kv:
 #                  (kv[1], kv[0]))
 # deciding rules
+
+
+# Encreption
+
 P_Text_Cipher = ""
 for i in P_Text:
     P_Text_Cipher += LSS[i.lower()]
 
 print(P_Text_Cipher)
+
+
+
+#  decription
+
+
+def get_key_from_value(d, val):
+    keys = [k for k, v in d.items() if v == val]
+    if keys:
+        return keys[0]
+    return None
+
+P_Text_Cipher_d=""
+
+for i in P_Text_Cipher:
+    P_Text_Cipher_d += get_key_from_value(LSS,i)
+
+print(P_Text_Cipher_d)
+
+
+# key = get_key_from_value(d, 'aaa')
+# print(key)
+# # key1
+#
+# key = get_key_from_value(d, 'bbb')
+# print(key)
+# # key3
+#
+# key = get_key_from_value(d, 'xxx')
+# print(key)
+# # None
