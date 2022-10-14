@@ -77,9 +77,30 @@ print(letterCount)
 for i, j in count_Freq.items():
     per_oo[i] = (j / letterCount) * 100
 
-print(sorted(per_oo.items(),reverse=True, key=lambda kv:
+print(sorted(per_oo.items(), reverse=True, key=lambda kv:
 (kv[1], kv[0])))
+
+list_1 = ["a", 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+          'w', 'x', 'y', 'z']
+ss = 'JICAXSEYVDKWBQTZRHFMPNULGO'
+LSS = {}
+
+j = 0
+for i in list_1:
+    LSS[i] = ss[j]
+    j += 1
+# print(LSS)
+
+LSS = {'a': 'J', 'b': 'I', 'c': 'C', 'd': 'A', 'e': 'X', 'f': 'S', 'g': 'E',
+       'h': 'Y', 'i': 'V', 'j': 'D', 'k': 'K', 'l': 'W', 'm': 'B', 'n': 'Q', 'o': 'T',
+       'p': 'Z', 'q': 'R', 'r': 'H', 's': 'F', 't': 'M', 'u': 'P', 'v': 'N', 'w': 'U', 'x': 'L',
+       'y': 'G', 'z': 'O'}
 
 # sorted(per_oo.items(), key=lambda kv:
 #                  (kv[1], kv[0]))
 # deciding rules
+P_Text_Cipher = ""
+for i in P_Text:
+    P_Text_Cipher += LSS[i.lower()]
+
+print(P_Text_Cipher)
