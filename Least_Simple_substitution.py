@@ -9,9 +9,14 @@ def remove(string):
 # Driver Program
 
 # input the string
+P_Text = input("give me the  text Please")
+while True:
+        chc = input('Encrypt or Decrypt (0/1)')
+        if chc in ['0', '1']:
+            break
+            print('Choose 0 / 1')
 
 
-P_Text = input("give me the Plant text Please")
 P_Text = P_Text.upper()
 P_Text.strip()
 P_Text = remove(P_Text)
@@ -102,30 +107,31 @@ LSS = {'a': 'J', 'b': 'I', 'c': 'C', 'd': 'A', 'e': 'X', 'f': 'S', 'g': 'E',
 
 
 # Encreption
+if chc =="0":
+    P_Text_Cipher = ""
+    for i in P_Text:
+        P_Text_Cipher += LSS[i.lower()]
 
-P_Text_Cipher = ""
-for i in P_Text:
-    P_Text_Cipher += LSS[i.lower()]
-
-print(P_Text_Cipher)
+    print(P_Text_Cipher)
 
 
 
 #  decription
+if chc == "1":
 
 
-def get_key_from_value(d, val):
-    keys = [k for k, v in d.items() if v == val]
-    if keys:
-        return keys[0]
-    return None
+    def get_key_from_value(d, val):
+        keys = [k for k, v in d.items() if v == val]
+        if keys:
+            return keys[0]
+        return None
 
-P_Text_Cipher_d=""
+    P_Text_Cipher_d=""
 
-for i in P_Text_Cipher:
-    P_Text_Cipher_d += get_key_from_value(LSS,i)
+    for i in P_Text:
+        P_Text_Cipher_d += get_key_from_value(LSS,i)
 
-print(P_Text_Cipher_d)
+    print(P_Text_Cipher_d)
 
 
 # key = get_key_from_value(d, 'aaa')
