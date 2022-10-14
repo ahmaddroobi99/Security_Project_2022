@@ -59,15 +59,17 @@ letterFrequency = {'E': 12.0,
                    'J': 0.10,
                    'Z': 0.07}
 #  finding freqancy
-print(P_Text)
+# print(P_Text)
+
 for i in P_Text:
     if i in count_Freq:
         count_Freq[i] += 1
     else:
         count_Freq[i] = 1
-print(P_Text)
-print("\n")
-print(count_Freq)
+
+# print(P_Text)
+# print("\n")
+# print(count_Freq)
 
 # percentage
 per_oo = {}
@@ -77,7 +79,7 @@ ss = set(ss)
 letterCount = 0
 for k, m in count_Freq.items():
     letterCount += m
-print(letterCount)
+# print(letterCount)
 
 for i, j in count_Freq.items():
     per_oo[i] = (j / letterCount) * 100
@@ -85,16 +87,16 @@ for i, j in count_Freq.items():
 print(sorted(per_oo.items(), reverse=True, key=lambda kv:
 (kv[1], kv[0])))
 
-list_1 = ["a", 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
-          'w', 'x', 'y', 'z']
-ss = 'JICAXSEYVDKWBQTZRHFMPNULGO'
-LSS = {}
-
-j = 0
-for i in list_1:
-    LSS[i] = ss[j]
-    j += 1
-# print(LSS)
+# list_1 = ["a", 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+#           'w', 'x', 'y', 'z']
+# ss = 'JICAXSEYVDKWBQTZRHFMPNULGO'
+# LSS = {}
+#
+# j = 0
+# for i in list_1:
+#     LSS[i] = ss[j]
+#     j += 1
+# # print(LSS)
 
 LSS = {'a': 'J', 'b': 'I', 'c': 'C', 'd': 'A', 'e': 'X', 'f': 'S', 'g': 'E',
        'h': 'Y', 'i': 'V', 'j': 'D', 'k': 'K', 'l': 'W', 'm': 'B', 'n': 'Q', 'o': 'T',
