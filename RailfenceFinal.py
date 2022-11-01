@@ -96,9 +96,18 @@ if __name__ == "__main__":
     if cc == 0:
         string_P = input("Please enter a plain text")
         nn = int(input("the key rails"))
+        if nn==111 :
+            for i in range(10):
+                print(encryptRailFence(string_P, i))
         print(encryptRailFence(string_P, nn))
 
     if cc == 1:
         string_C = input("Please enter a cipher  text")
         nn = int(input("the key rails"))
-        print(decryptRailFence(string_C, nn))
+        if nn==111 :
+
+            for i in range(3,10):
+                print(decryptRailFence(string_C, i))
+        else :
+            print(decryptRailFence(string_C, nn))
+# ah ih andbmdmaroado
